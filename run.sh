@@ -12,7 +12,7 @@ if [ ! "$WERCKER_GIT_PULL_REQUEST_SOURCE" = "$WERCKER_GIT_BRANCH" ]; then
     exit 0
 fi
 
-echo "Creating pull request"
+echo "Creating pull request from $WERCKER_GIT_PULL_REQUEST_SOURCE -> $WERCKER_GIT_PULL_REQUEST_DESTINATION for $WERCKER_GIT_OWNER/$WERCKER_GIT_REPOSITORY"
 curl --user "$WERCKER_GIT_PULL_REQUEST_GITHUB_ACCESS_TOKEN:x-oauth-basic" \
        --request POST \
        --data '{"head": "$WERCKER_GIT_PULL_REQUEST_SOURCE", "base": "$WERCKER_GIT_PULL_REQUEST_DESTINATION","title":"wercker automated pull request from $WERCKER_GIT_BRANCH branch."}' \
