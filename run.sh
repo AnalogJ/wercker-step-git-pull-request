@@ -9,7 +9,7 @@ fi
 
 if [ ! "$WERCKER_GIT_PULL_REQUEST_SOURCE" = "$WERCKER_GIT_BRANCH" ]; then
     setMessage "skipping, the source branch does not match the current branch"
-    exit(0)
+    exit 0
 fi
 
 echo "Creating pull request"
