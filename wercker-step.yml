@@ -1,3 +1,3 @@
 name: git-pull-request
-version: 0.0.2
+version: 0.0.3
 description: create a pull request if the source branch matches the current branch.
